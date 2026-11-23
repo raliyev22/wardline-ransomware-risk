@@ -62,5 +62,5 @@ Thumbs.db
 .vscode/*
 !.vscode/extensions.json
 
-# --- Local Claude Code settings (shared launch config is kept) ---
-.claude/settings.local.json
+# --- Local editor configuration ---
+.claude/

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "status": "synthetic_illustrative",
+    "currency": "USD_2026",
+    "operating_days_per_year": 365,
+    "annual_encounters": 610000,
+    "annual_revenue_usd": 520000000,
+    "revenue_per_encounter_context_only": 852.46,
+    "notes": [
+      "Annual encounters are NOT unique patients and may include overlapping service categories.",
+      "Loss of contribution margin, not total gross revenue, is used for unrecovered services.",
+      "Patient diversion indicators are nonfinancial; no separate dollar penalty is added.",
+      "Incident recovery days represent ecosystem disruption, not full network-wide shutdown.",
+      "All unit rates and affected shares are synthetic planning assumptions requiring calibration."
+    ]
+  },
+  "unit_rates": {
+    "restoration_engineer_hour_usd": 115,
+    "incident_response_specialist_hour_usd": 230,
+    "overtime_hour_usd": 65,
+    "notification_per_record_usd": 6,
+    "legal_counsel_hour_usd": 310,
+    "service_contribution_margin_usd": 260,
+    "temporary_care_capacity_per_day_usd": 18000,
+    "external_recovery_day_usd": 18000,
+    "forensic_retainer_usd": 30000,
+    "replacement_per_server_usd": 18000,
+    "reputation_lost_contribution_per_patient_usd": 260
+  },
+  "severity": {
+    "contained": {
+      "disruption_days": 2.27,
+      "affected_encounter_fraction": 0.08,
+      "cancelled_fraction_of_affected": 0.32,
+      "unrecovered_fraction": 0.5,
+      "systems_restored": 15,
+      "engineer_hours_per_system": 18,
+      "external_recovery_days": 2,
+      "replacement_servers": 2,
+      "ir_specialists": 5,
+      "ir_hours_each": 60,
+      "extra_staff_count": 30,
+      "overtime_hours_each_per_day": 2,
+      "continuity_daily_capacity_factor": 0.35,
+      "exposed_records_if_breach": 2000,
+      "legal_hours": 45,
+      "reputation_patients_lost": 100,
+      "reputation_probability": 0.25
+    },
+    "major": {
+      "disruption_days": 11.33,
+      "affected_encounter_fraction": 0.25,
+      "cancelled_fraction_of_affected": 0.5,
+      "unrecovered_fraction": 0.6,
+      "systems_restored": 80,
+      "engineer_hours_per_system": 32,
+      "external_recovery_days": 12,
+      "replacement_servers": 12,
+      "ir_specialists": 12,
+      "ir_hours_each": 140,
+      "extra_staff_count": 130,
+      "overtime_hours_each_per_day": 2,
+      "continuity_daily_capacity_factor": 1.0,
+      "exposed_records_if_breach": 45000,
+      "legal_hours": 380,
+      "reputation_patients_lost": 1200,
+      "reputation_probability": 0.75
+    },
+    "severe": {
+      "disruption_days": 31,
+      "affected_encounter_fraction": 0.48,
+      "cancelled_fraction_of_affected": 0.65,
+      "unrecovered_fraction": 0.7,
+      "systems_restored": 200,
+      "engineer_hours_per_system": 45,
+      "external_recovery_days": 35,
+      "replacement_servers": 45,
+      "ir_specialists": 22,
+      "ir_hours_each": 230,
+      "extra_staff_count": 300,
+      "overtime_hours_each_per_day": 2.5,
+      "continuity_daily_capacity_factor": 2.3,
+      "exposed_records_if_breach": 170000,
+      "legal_hours": 1300,
+      "reputation_patients_lost": 3800,
+      "reputation_probability": 0.9
+    }
+  },
+  "loss_variability": {
+    "low_factor": 0.65,
+    "mode_factor": 1.0,
+    "high_factor": 1.55
+  },
+  "assumption_rationale": {
+    "affected_encounter_fraction": "Synthetic share of daily encounters exposed to impaired services, not share of all patient records",
+    "cancelled_fraction_of_affected": "Synthetic portion of affected encounters that cannot be delivered during disruption",
+    "unrecovered_fraction": "Synthetic fraction of cancelled encounters not later rescheduled; only these generate lost contribution",
+    "service_contribution_margin_usd": "Synthetic incremental contribution per encounter; not average revenue or gross charges",
+    "systems_restored": "Illustrative subset of 220 workloads plus connected applications requiring direct recovery; severe count capped at 220",
+    "reputation_patients_lost": "Synthetic distinct future encounters lost after service restoration; excludes immediate cancellations",
+    "disruption_days": "Central duration aligned with the mean of severity-specific triangular recovery-day inputs",
+    "continuity_daily_capacity_factor": "Scale of incremental diversion/temporary-care contracts; not the same as lost encounter margin",
+    "exposed_records_if_breach": "Conditional exposure quantity; notification cost gated by existing severity-specific breach probability",
+    "loss_variability": "Common synthetic cost-uncertainty band, not a confidence interval or independently estimated component distribution"
+  }
+}

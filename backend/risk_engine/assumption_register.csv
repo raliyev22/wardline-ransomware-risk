@@ -1,0 +1,18 @@
+parameter,source_status,rationale,calculation_or_calibration,confidence
+Annual relevant attack attempts,synthetic assumption,"Counts credible attempts that reach the modeled pathway, not raw phishing email volume or internet scans","Replace with normalized annual SOC, phishing and VPN/vendor incident records",low
+Initial access / deployment / spread probabilities,synthetic assumption,Conditional probabilities represent separate intrusion stages and are not interchangeable,Calibrate each denominator from attack-path observations or expert elicitation,low
+Severe escalation probability,synthetic assumption,Severity determined by spread and escalation; Package 3 categorical weights not sampled again,Use incident response exercises and outage postmortems,low
+Loss component triangular min/mode/max,synthetic assumption,"Uncertain severity-dependent loss envelopes, not observed costs",Bottom-up: quantities × unit costs; interview finance/clinical operations; avoid overlapping components,low
+Restoration costs,synthetic assumption,"External forensics, rebuild and infrastructure recovery effort",Responder hours × rates + hardware/cloud replacement + restoration vendors,low
+Incident response costs,synthetic assumption,Emergency response coordination and security investigation distinct from restoration,IR hours × rate + outside counsel limited to legal category,low
+Business interruption costs,synthetic assumption,"Net contribution lost from cancelled or displaced revenue, not gross revenue plus margin",Cancelled services × contribution margin per service + unrecoverable receivables,low
+Clinical continuity costs,synthetic assumption,Incremental patient diversion and alternate-care operational expense,Diversions × incremental transport/transfer cost + temporary care operations; no duplicate lost revenue,low
+Notification costs,synthetic assumption,Only when data exposure occurs; ransomware encryption alone does not guarantee disclosure,Exposure probability × affected records × notification/support unit cost,low
+Legal costs,synthetic assumption,"Investigation, compliance and litigation response, not automatic fines",Outside counsel fees + plausible case-specific regulatory/legal exposure,low
+Reputational costs,synthetic assumption,Future net contribution lost from reduced patient volume; excludes immediate cancelled visits,Projected future volume decline × contribution margin × persistence period; avoid overlap with interruption,low
+Extra staffing costs,synthetic assumption,Overtime and temporary staffing incremental to existing salaries,Extra shift hours × loaded hourly rate + agency premiums,low
+Recovery duration,synthetic assumption,"Outage ecosystem recovery time, distinct from individual asset RTO","Downtime logs, recovery drills, restoration dependencies",low
+Diverted patients and delayed appointments,synthetic assumption,Nonfinancial patient care impact indicators; not monetized as patient harm,Daily service capacity × fraction disrupted × incident duration; separate recovered vs permanently lost visits,low
+Investment capex / opex,synthetic assumption,"Planning-level estimates for scope, labor, licenses and maintenance",Vendor quote + hardware/license + rollout labor + training + ongoing support; first-year cash = capex+opex,low
+Control relative effectiveness,synthetic assumption,Hypothetical marginal reductions from baseline to target coverage; strongest-only overlap,Elicit ranges from technical SMEs; validate using exercises and attack simulations,low
+Clinical guardrails,synthetic policy choice,Illustrative board priorities to prevent optimizing only dollars,"Define threshold with CISO, clinical leadership, risk committee; sensitivity test",low

@@ -1,0 +1,4 @@
+severity_id,diverted_patients_min,diverted_patients_mode,diverted_patients_max,delayed_appointments_min,delayed_appointments_mode,delayed_appointments_max,trust_index_drop_min,trust_index_drop_mode,trust_index_drop_max,trust_recovery_months_min,trust_recovery_months_mode,trust_recovery_months_max
+contained,0,10,50,10,60,200,0,1,3,1,2,4
+major,80,300,900,250,1000,3000,3,7,12,3,7,12
+severe,500,1800,5000,1500,5000,14000,8,16,28,8,16,30

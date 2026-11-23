@@ -1,0 +1,25 @@
+severity_id,component_id,distribution,min_usd,mode_usd,max_usd,applies_when,notes
+contained,restoration,triangular,100000,350000,800000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,response,triangular,30000,80000,180000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,interruption,triangular,30000,90000,220000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,continuity,triangular,10000,40000,120000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,notification,triangular,0,10000,50000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,legal,triangular,0,10000,40000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,reputation,triangular,0,10000,50000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+contained,extra_staff,triangular,0,20000,70000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,restoration,triangular,700000,1500000,3000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,response,triangular,200000,600000,1200000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,interruption,triangular,200000,700000,1500000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,continuity,triangular,150000,450000,1000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,notification,triangular,100000,300000,800000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,legal,triangular,50000,250000,650000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,reputation,triangular,50000,200000,600000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+major,extra_staff,triangular,100000,400000,1000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,restoration,triangular,2500000,5000000,9000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,response,triangular,800000,1800000,3500000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,interruption,triangular,800000,2000000,4000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,continuity,triangular,500000,1300000,3000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,notification,triangular,400000,1200000,2800000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,legal,triangular,200000,800000,2000000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,reputation,triangular,200000,600000,1500000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs
+severe,extra_staff,triangular,500000,1500000,3500000,per_successful_disruptive_ransomware_event,Synthetic illustrative; sample once per event; do not also sum asset disruption/day costs

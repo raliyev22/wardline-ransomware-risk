@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0",
+  "data_status": "synthetic_illustrative",
+  "scenarios": [
+    {
+      "scenario_id": "phishing_credentials",
+      "name": "Phishing and stolen credentials",
+      "entry_point": "Workforce email and identity",
+      "description": "Attacker obtains credentials through phishing and attempts access to clinical applications or endpoints; may deploy ransomware if detection and containment fail.",
+      "entry_asset_ids": [
+        "A04"
+      ],
+      "potentially_affected_asset_ids": [
+        "A04",
+        "A02",
+        "A01",
+        "A06",
+        "A05",
+        "A03"
+      ],
+      "primary_control_ids": [
+        "C01",
+        "C07",
+        "C02",
+        "C03",
+        "C04",
+        "C08"
+      ],
+      "sequence": [
+        "Phishing or credential theft",
+        "Account access attempt",
+        "Foothold or endpoint execution",
+        "Privilege escalation and lateral movement",
+        "Ransomware deployment attempt",
+        "Containment or service disruption"
+      ],
+      "annual_attempt_distribution": "poisson",
+      "annual_attempt_mean": 12
+    },
+    {
+      "scenario_id": "vpn_exploit",
+      "name": "Unpatched VPN exploitation",
+      "entry_point": "Internet-facing VPN or remote access gateway",
+      "description": "Attacker exploits an unpatched externally reachable gateway, then attempts internal compromise and ransomware deployment.",
+      "entry_asset_ids": [
+        "A02"
+      ],
+      "potentially_affected_asset_ids": [
+        "A02",
+        "A01",
+        "A06",
+        "A03",
+        "A05",
+        "A04"
+      ],
+      "primary_control_ids": [
+        "C06",
+        "C02",
+        "C03",
+        "C04",
+        "C08"
+      ],
+      "sequence": [
+        "Exploitation attempt",
+        "Gateway compromise",
+        "Internal foothold",
+        "Privilege escalation and lateral movement",
+        "Ransomware deployment attempt",
+        "Containment or service disruption"
+      ],
+      "annual_attempt_distribution": "poisson",
+      "annual_attempt_mean": 4
+    },
+    {
+      "scenario_id": "vendor_credentials",
+      "name": "Compromised vendor credentials",
+      "entry_point": "Trusted vendor remote access",
+      "description": "Attacker abuses stolen vendor credentials or an improperly restricted vendor session to reach clinical services and attempt ransomware deployment.",
+      "entry_asset_ids": [
+        "A02",
+        "A06"
+      ],
+      "potentially_affected_asset_ids": [
+        "A02",
+        "A06",
+        "A01",
+        "A03",
+        "A05"
+      ],
+      "primary_control_ids": [
+        "C05",
+        "C01",
+        "C07",
+        "C02",
+        "C03",
+        "C04",
+        "C08"
+      ],
+      "sequence": [
+        "Vendor credential compromise",
+        "Remote access attempt",
+        "Abuse of privileged access",
+        "Lateral movement",
+        "Ransomware deployment attempt",
+        "Containment or service disruption"
+      ],
+      "annual_attempt_distribution": "poisson",
+      "annual_attempt_mean": 3
+    }
+  ]
+}

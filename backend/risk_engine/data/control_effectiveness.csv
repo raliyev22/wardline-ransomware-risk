@@ -1,0 +1,14 @@
+investment_id,control_id,scenario_id,affected_metric,target_relative_reduction,overlap_group,modeling_note,data_status
+I01,C01,phishing_credentials,initial_access,0.3,C01_C07_joint,MFA and phishing resistance represented by one joint effect; no separate C07 multiplier,synthetic_illustrative
+I01,C01,vendor_credentials,initial_access,0.18,C01_C07_joint,Joint identity improvement; combine carefully with I05,synthetic_illustrative
+I02,C02,phishing_credentials,deployment,0.28,detection,Reduces conditional deployment,synthetic_illustrative
+I02,C02,vpn_exploit,deployment,0.25,detection,Reduces conditional deployment,synthetic_illustrative
+I02,C02,vendor_credentials,deployment,0.25,detection,Reduces conditional deployment,synthetic_illustrative
+I03,C03,phishing_credentials,major_spread,0.35,segmentation,"Reduces spread, not initial entry",synthetic_illustrative
+I03,C03,vpn_exploit,major_spread,0.35,segmentation,"Reduces spread, not initial entry",synthetic_illustrative
+I03,C03,vendor_credentials,major_spread,0.35,segmentation,"Reduces spread, not initial entry",synthetic_illustrative
+I04,C04,all,recovery_days,0.3,recovery,Target relative reduction in sampled recovery days; not attack frequency,synthetic_illustrative
+I05,C05,vendor_credentials,initial_access,0.4,vendor_identity,Shares credential pathway with I01; use overlap rule,synthetic_illustrative
+I06,C06,vpn_exploit,initial_access,0.5,patching,Reduces conditional initial access,synthetic_illustrative
+I07,C08,all,recovery_days,0.15,recovery,Target relative reduction in sampled recovery days,synthetic_illustrative
+I08,C03,all,iomt_disruption,0.35,iomt_isolation,Reduces probability of A03 impact conditional on major spread; does not change global C03 coverage,synthetic_illustrative

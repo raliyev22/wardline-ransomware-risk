@@ -1,0 +1,39 @@
+{
+  "organization_id": "RHN-001",
+  "name": "Regional Healthcare Network",
+  "type": "fictional_us_nonprofit_regional_provider",
+  "data_status": "synthetic_illustrative",
+  "baseline_year": 2026,
+  "facilities": {
+    "hospitals": 2,
+    "specialty_clinics": 14,
+    "urgent_care_centers": 10,
+    "licensed_hospital_beds": 560
+  },
+  "operations": {
+    "annual_patient_encounters": 610000,
+    "annual_inpatient_admissions": 24500,
+    "annual_emergency_visits": 98000,
+    "annual_telehealth_visits": 78000,
+    "employees": 7200,
+    "workforce_endpoints": 5800,
+    "networked_medical_devices": 1200,
+    "virtual_servers_and_cloud_workloads": 220,
+    "critical_technology_vendors": 42
+  },
+  "financials_usd": {
+    "annual_operating_revenue": 520000000,
+    "annual_operating_expenses": 505000000,
+    "annual_operating_margin": 15000000,
+    "annual_digital_infrastructure_spend": 38000000,
+    "new_ransomware_resilience_capex_budget": 2000000,
+    "budget_horizon_months": 12
+  },
+  "modeling_notes": [
+    "Milestone 1 figures reused where applicable: 2 hospitals, 14 clinics, 10 urgent care centers, 5800 endpoints, 1200 IoMT, 220 workloads, 42 vendors, $520M revenue, $505M expenses, $38M digital infrastructure spend.",
+    "New figures are invented for project demonstration and are not empirical healthcare benchmarks.",
+    "Existing $38M annual technology spending is separate from new $2M improvement budget.",
+    "Patient encounter categories can overlap; do not sum them to obtain unique patients.",
+    "Assets and controls are a simplified risk-model inventory, not a complete configuration management database."
+  ]
+}

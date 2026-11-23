@@ -1,0 +1,9 @@
+investment_id,investment_name,domain,capex_usd,incremental_annual_opex_usd,implementation_months,affected_control_ids,protected_asset_ids,relevant_scenario_ids,baseline_coverage_pct,target_coverage_pct,coverage_delta_pct_points,selectable,data_status
+I01,MFA expansion and phishing-resistant rollout,identity,300000,45000,3,C01;C07,A01;A02;A04;A05;A06,phishing_credentials;vendor_credentials,65,90,25,true,synthetic_illustrative
+I02,EDR coverage and managed response,detection,350000,95000,3,C02,A02;A04,phishing_credentials;vpn_exploit;vendor_credentials,75,95,20,true,synthetic_illustrative
+I03,Clinical network segmentation,containment,750000,85000,6,C03,A01;A02;A03;A06,phishing_credentials;vpn_exploit;vendor_credentials,40,85,45,true,synthetic_illustrative
+I04,Immutable backups and restore verification,recovery,500000,70000,4,C04,A01;A05;A06,phishing_credentials;vpn_exploit;vendor_credentials,45,95,50,true,synthetic_illustrative
+I05,Vendor privileged access hardening,identity,250000,50000,3,C05,A01;A02;A03;A06,vendor_credentials,50,95,45,true,synthetic_illustrative
+I06,VPN patch management and exposure reduction,prevention,180000,40000,3,C06,A02;A05,vpn_exploit,70,98,28,true,synthetic_illustrative
+I07,Ransomware recovery exercises and clinical downtime drills,recovery,120000,35000,3,C08,A01;A02;A03;A05;A06,phishing_credentials;vpn_exploit;vendor_credentials,50,100,50,true,synthetic_illustrative
+I08,Legacy medical-device isolation pilot,containment,450000,60000,6,C03,A03;A02,phishing_credentials;vpn_exploit;vendor_credentials,40,70,30,true,synthetic_illustrative

@@ -1,0 +1,66 @@
+# ---------------------------------------------------------------------------
+# Healthcare ransomware decision-support platform (academic, synthetic data)
+# Source, synthetic datasets, engine reports, docs and tests are committed.
+# Dependencies, virtual environments, caches and build output are not.
+# ---------------------------------------------------------------------------
+
+# --- Environment files (secrets) — keep only documented examples ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+backend/.local/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.Python
+*.egg-info/
+.eggs/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Node / Next.js (frontend/.gitignore adds Next-specific rules) ---
+node_modules/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+.vercel/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Keys and certificates ---
+*.pem
+*.key
+*.p12
+*.pfx
+
+# --- Logs and temp files ---
+*.log
+*.tmp
+*.swp
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# --- Local Claude Code settings (shared launch config is kept) ---
+.claude/settings.local.json

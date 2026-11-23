@@ -1,0 +1,19 @@
+control_id,scenario_id,affected_stage,direction,modeling_note
+C01,phishing_credentials,initial_access,decrease,Relevant-account MFA coverage; do not double count C07
+C07,phishing_credentials,initial_access,decrease,Phishing-resistant MFA is a subset of MFA
+C02,phishing_credentials,deployment,decrease,Endpoint detection can interrupt execution
+C03,phishing_credentials,major_spread,decrease,Segmentation limits lateral movement
+C06,vpn_exploit,initial_access,decrease,Patching reduces exposure of internet-facing VPN
+C02,vpn_exploit,deployment,decrease,Detection can interrupt post-exploitation activity
+C03,vpn_exploit,major_spread,decrease,Segmentation limits movement
+C05,vendor_credentials,initial_access,decrease,Time-bound vendor access and least privilege
+C01,vendor_credentials,initial_access,decrease,MFA may limit stolen credential access
+C07,vendor_credentials,initial_access,decrease,Phishing-resistant MFA is nested within MFA
+C02,vendor_credentials,deployment,decrease,Detection can interrupt deployment
+C03,vendor_credentials,major_spread,decrease,Segmentation limits movement
+C04,phishing_credentials,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"
+C08,phishing_credentials,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"
+C04,vpn_exploit,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"
+C08,vpn_exploit,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"
+C04,vendor_credentials,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"
+C08,vendor_credentials,recovery_severity,decrease,"Backup and exercises affect loss severity, not initial attack probability"

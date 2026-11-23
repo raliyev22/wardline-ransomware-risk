@@ -1,0 +1,16 @@
+scenario_id,parameter_id,distribution,min_value,mode_or_mean,max_value,unit,definition,data_status
+phishing_credentials,annual_relevant_attempts,poisson,0,12,,attempts_per_year,Annual attempts capable of reaching the modeled entry path; not all spam/scans,synthetic_illustrative
+phishing_credentials,p_initial_access_given_attempt,triangular,0.072,0.12,0.18,probability,Conditional probability of gaining an initial foothold given a relevant attempt under baseline controls,synthetic_illustrative
+phishing_credentials,p_ransomware_deployment_given_access,triangular,0.247,0.38,0.513,probability,Conditional probability of ransomware deployment given initial access under baseline controls,synthetic_illustrative
+phishing_credentials,p_major_spread_given_deployment,triangular,0.18,0.3,0.42,probability,Conditional probability of major spread given ransomware deployment under baseline controls,synthetic_illustrative
+phishing_credentials,p_severe_given_major_spread,triangular,0.1,0.22,0.4,probability,Conditional probability of severe ecosystem disruption given major spread,synthetic_illustrative
+vpn_exploit,annual_relevant_attempts,poisson,0,4,,attempts_per_year,Annual attempts capable of reaching the modeled entry path; not all spam/scans,synthetic_illustrative
+vpn_exploit,p_initial_access_given_attempt,triangular,0.15,0.25,0.375,probability,Conditional probability of gaining an initial foothold given a relevant attempt under baseline controls,synthetic_illustrative
+vpn_exploit,p_ransomware_deployment_given_access,triangular,0.3575,0.55,0.7425,probability,Conditional probability of ransomware deployment given initial access under baseline controls,synthetic_illustrative
+vpn_exploit,p_major_spread_given_deployment,triangular,0.3,0.5,0.7,probability,Conditional probability of major spread given ransomware deployment under baseline controls,synthetic_illustrative
+vpn_exploit,p_severe_given_major_spread,triangular,0.1,0.22,0.4,probability,Conditional probability of severe ecosystem disruption given major spread,synthetic_illustrative
+vendor_credentials,annual_relevant_attempts,poisson,0,3,,attempts_per_year,Annual attempts capable of reaching the modeled entry path; not all spam/scans,synthetic_illustrative
+vendor_credentials,p_initial_access_given_attempt,triangular,0.132,0.22,0.33,probability,Conditional probability of gaining an initial foothold given a relevant attempt under baseline controls,synthetic_illustrative
+vendor_credentials,p_ransomware_deployment_given_access,triangular,0.325,0.5,0.675,probability,Conditional probability of ransomware deployment given initial access under baseline controls,synthetic_illustrative
+vendor_credentials,p_major_spread_given_deployment,triangular,0.252,0.42,0.588,probability,Conditional probability of major spread given ransomware deployment under baseline controls,synthetic_illustrative
+vendor_credentials,p_severe_given_major_spread,triangular,0.1,0.22,0.4,probability,Conditional probability of severe ecosystem disruption given major spread,synthetic_illustrative

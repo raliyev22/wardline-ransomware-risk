@@ -1,0 +1,4 @@
+severity_id,conditional_probability_given_disruptive_event,recovery_days_min,recovery_days_mode,recovery_days_max,distribution,notes
+contained,0.56,0.8,2,4,triangular,Recovery duration for affected care ecosystem; not asset RTO; scenario-specific calibration may change probabilities
+major,0.34,4,10,20,triangular,Recovery duration for affected care ecosystem; not asset RTO; scenario-specific calibration may change probabilities
+severe,0.1,15,28,50,triangular,Recovery duration for affected care ecosystem; not asset RTO; scenario-specific calibration may change probabilities

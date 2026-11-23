@@ -1,0 +1,29 @@
+{
+  "note": "Arithmetic demonstration using modal stage probabilities; NOT Monte Carlo output, calibrated risk, or independently validated rates. Counts are expectations and can be fractional. Scenarios assumed disjoint for prototype; overlapping campaigns require deduplication.",
+  "rows": [
+    {
+      "scenario_id": "phishing_credentials",
+      "attempts_per_year_point": 12,
+      "initial_access_events_per_year_point": 1.44,
+      "ransomware_deployments_per_year_point": 0.5472,
+      "major_spread_events_per_year_point": 0.1642,
+      "severe_events_per_year_point": 0.0361
+    },
+    {
+      "scenario_id": "vpn_exploit",
+      "attempts_per_year_point": 4,
+      "initial_access_events_per_year_point": 1.0,
+      "ransomware_deployments_per_year_point": 0.55,
+      "major_spread_events_per_year_point": 0.275,
+      "severe_events_per_year_point": 0.0605
+    },
+    {
+      "scenario_id": "vendor_credentials",
+      "attempts_per_year_point": 3,
+      "initial_access_events_per_year_point": 0.66,
+      "ransomware_deployments_per_year_point": 0.33,
+      "major_spread_events_per_year_point": 0.1386,
+      "severe_events_per_year_point": 0.0305
+    }
+  ]
+}

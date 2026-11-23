@@ -1,0 +1,7 @@
+asset_id,asset_name,asset_category,quantity,criticality,depends_on_asset_ids,target_rto_hours,illustrative_severe_event_recovery_hours,illustrative_disruption_cost_usd_per_day,primary_service,ransomware_exposure_note,data_status
+A01,Central EHR,clinical_application,1,critical,A02;A04;A06,4,24,420000,"clinical records, medication orders and care coordination",centralized shared EHR; outage affects multiple facilities,synthetic_illustrative
+A02,Clinical network and identity infrastructure,network_identity,1,critical,A04;A06,8,48,230000,"hospital connectivity, authentication and core network services",partial segmentation increases lateral-movement exposure,synthetic_illustrative
+A03,Connected medical devices / IoMT,clinical_iomt,1200,critical,A02;A01,12,72,120000,"monitoring, biomedical integration and connected device workflows",some legacy devices cannot be patched promptly,synthetic_illustrative
+A04,Workforce endpoints,endpoints,5800,high,A02,24,72,85000,clinical and administrative workstations,phishing entry point and possible ransomware propagation,synthetic_illustrative
+A05,Patient portal and telemedicine,patient_facing_platforms,3,high,A01;A02,12,48,95000,"patient scheduling, portal access and virtual consultations",interruption creates cancellations and trust erosion,synthetic_illustrative
+A06,"Billing, pharmacy and laboratory systems",clinical_business_apps,3,critical,A01;A02,8,48,185000,"prescriptions, tests, claims and cash collection",outage delays care workflows and revenue cycle,synthetic_illustrative

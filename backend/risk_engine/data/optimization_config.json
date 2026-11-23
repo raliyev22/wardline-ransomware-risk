@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "currency": "USD",
+  "budget_capex_usd": 2000000,
+  "budget_horizon_months": 12,
+  "objective": "minimize expected annual ransomware financial loss plus annualized incremental security spending, subject to capex budget and clinical safety constraints",
+  "cost_convention": {
+    "budget_constraint": "sum(capex_usd + incremental_annual_opex_usd) <= budget_first_year_cash_usd",
+    "annualized_cost": "capex / assumed useful life years + incremental annual opex",
+    "assumed_useful_life_years": 3,
+    "note": "For first-year cash flow report full capex plus first-year opex separately. Do not add full capex and amortized capex together."
+  },
+  "effect_rule": {
+    "single_investment": "At full target, new stage parameter = baseline stage parameter * (1 - target_relative_reduction); interpolate linearly from baseline to target coverage for partial deployment. Clamp probabilities to [0,1].",
+    "recovery_days": "Apply recovery-day multipliers to incident recovery time, with a minimum plausible floor; do not modify initial access.",
+    "overlap": "When multiple investments affect the same scenario and stage, default to strongest reduction only (conservative non-stacking); never multiply overlapping identity or segmentation effects without explicit validated combined model.",
+    "baseline_reference": "All effects are relative to Package 2 baseline values, not absolute probability-point reductions.",
+    "asset_scope": "I08 affects A03 conditional disruption only; do not automatically change overall major spread probability."
+  },
+  "optimization": {
+    "decision_variables": "binary investment selection for initial version",
+    "constraints": [
+      "capex budget",
+      "I08 requires I03 or separate approved segmentation architecture",
+      "clinical-safety reporting must be shown alongside financial optimum"
+    ],
+    "comparison": [
+      "no new investment",
+      "CISO selected investments",
+      "model optimized investments"
+    ],
+    "risk_metrics": [
+      "expected annual loss",
+      "p90 and p95 annual loss",
+      "probability of disruptive ransomware incident",
+      "expected downtime",
+      "patient diversion exposure",
+      "reputational loss"
+    ],
+    "clinical_safety": {
+      "max_annual_diverted_patients_fraction_of_baseline": 0.75,
+      "max_annual_recovery_days_fraction_of_baseline": 0.8,
+      "rationale": "Synthetic board-defined safety guardrails for demonstration; editable, not clinical standards."
+    }
+  },
+  "cautions": [
+    "Illustrative effectiveness assumptions, not measured causal effects.",
+    "Existing control coverage is a baseline; proposed investments must not overwrite the baseline when comparing strategies.",
+    "Use common random numbers across strategies to reduce Monte Carlo comparison noise.",
+    "No independent additive savings claims across investments.",
+    "Reputational and operational losses must avoid double-counting.",
+    "Clinical outcomes are separate metrics, not automatically converted to dollar values."
+  ],
+  "budget_first_year_cash_usd": 2000000
+}

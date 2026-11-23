@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "data_status": "synthetic_illustrative",
+  "units": {
+    "financial": "USD",
+    "recovery": "calendar_days",
+    "trust_index": "synthetic_0_to_100_index"
+  },
+  "loss_event_definition": "A ransomware deployment causing material clinical or business service disruption; non-disruptive intrusion attempts do not draw these losses.",
+  "severity_probability_scope": "Conditional on a disruptive ransomware event, not conditional on an attempt or initial compromise.",
+  "sampling": {
+    "severity": "categorical(severity_parameters conditional_probability_given_disruptive_event)",
+    "recovery_days": "triangular per severity",
+    "financial_components": "triangular per severity; sum 8 distinct nonoverlapping components",
+    "clinical_indicators": "triangular per severity; report separately from financial total"
+  },
+  "loss_component_definitions": {
+    "restoration": "Digital forensic recovery, system rebuilding and restoration vendors; excludes response coordination labor",
+    "response": "Incident response consultants and response coordination; excludes restoration vendors",
+    "interruption": "Net contribution lost from canceled or deferred care not recovered later; excludes future reputation-driven patient loss",
+    "continuity": "Patient diversion, temporary clinical workarounds, and contracted emergency capacity; exclude lost contribution already in interruption",
+    "notification": "Patient notification, credit monitoring and breach assessment; conditional on data exposure, use exposure gate later",
+    "legal": "Legal counsel, settlements, and conditional regulatory outcomes; no automatic HIPAA fine",
+    "reputation": "Future net contribution lost from persistent patient-volume decline after service restoration; excludes outage-period loss",
+    "extra_staff": "Incremental overtime and temporary staffing not already included in response or continuity"
+  },
+  "gates_to_add_in_engine": {
+    "data_exfiltration": "Notification and privacy-related legal costs require an explicit data-exposure branch; no automatic breach from encryption alone",
+    "reputation": "Use separate post-restoration volume decline assumptions; do not monetize trust index independently",
+    "patient_safety": "No fabricated death count; patient diversion and delays are exposure indicators, not automatically monetized"
+  },
+  "modeling_cautions": [
+    "Asset daily disruption cost in Package 1 is a prioritization proxy and must not be added to sampled total loss.",
+    "Severity probabilities must be applied only after ransomware deployment and disruption; Package 2 contains upstream conditional probabilities.",
+    "Loss distributions are provisional, subject to sensitivity testing and plausibility checks against the hospital financial baseline.",
+    "Costs are per disruptive incident; annual loss requires simulating event frequency and summing across simulated incidents.",
+    "Do not treat 0-100 trust index as a validated clinical or reputational metric."
+  ]
+}

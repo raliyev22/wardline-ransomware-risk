@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Wardline;
+  src: url("/wardline/wardline-sans.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: Wardline, "Segoe UI", Arial, sans-serif;
+  --color-slate-50: #f5f7f5;
+  --color-slate-100: #eaf0eb;
+  --color-slate-200: #dbe3df;
+  --color-slate-300: #bdcec4;
+  --color-slate-400: #71837a;
+  --color-slate-500: #596e6c;
+  --color-slate-600: #4b5f59;
+  --color-slate-700: #334b42;
+  --color-slate-800: #263d38;
+  --color-slate-900: #182a2b;
+
+  --color-navy-50: #eaf2ec;
+  --color-navy-100: #e1efe8;
+  --color-navy-200: #bfd8c9;
+  --color-navy-300: #91afa0;
+  --color-navy-500: #519480;
+  --color-navy-600: #367763;
+  --color-navy-700: #26654e;
+  --color-navy-800: #0b6355;
+  --color-navy-900: #09544f;
+  --color-navy-950: #163b33;
+
+  --color-accent-50: #edf5e7;
+  --color-accent-100: #deecd1;
+  --color-accent-500: #478769;
+  --color-accent-600: #086a60;
+  --color-accent-700: #09544f;
+  --color-wardline-lime: #c8e978;
+  --radius-xl: 14px;
+  --shadow-panel: 0 2px 3px #153c3005;
+}
+
+:root {
+  color-scheme: light;
+  --sidebar-width: 232px;
+  --chart-current: #147367;
+  --chart-funded: #789338;
+  --chart-recommended: #847ca4;
+}
+
+body {
+  background: var(--color-slate-50);
+  color: var(--color-slate-900);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.page-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #587368;
+  font-size: 0.69rem;
+  font-weight: 730;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+}
+
+.page-eyebrow::before {
+  content: "";
+  width: 19px;
+  height: 2px;
+  background: #519c85;
+}
+
+.page-title {
+  margin-top: 8px;
+  font-size: clamp(2rem, 3.1vw, 3rem);
+  line-height: 1.08;
+  font-weight: 620;
+  letter-spacing: -0.055em;
+  text-wrap: balance;
+}
+
+.risk-banner {
+  border-radius: var(--radius-xl);
+  background-color: #084b46;
+  background-image: linear-gradient(90deg, #084b46 24%, transparent 75%), url("/wardline/risk-contours.svg");
+  background-repeat: no-repeat;
+  background-position: center, right center;
+  background-size: cover, auto 130%;
+  color: white;
+  box-shadow: var(--shadow-panel);
+}
+
+.risk-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 205px;
+  padding: clamp(20px, 2.4vw, 32px);
+}
+
+.risk-value {
+  margin-block: 8px;
+  font-size: clamp(2.65rem, 5vw, 4.6rem);
+  font-weight: 550;
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+}
+
+.risk-caption {
+  max-width: min(52%, 37rem);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #d5e6dd;
+}
+
+.risk-cta {
+  background-image: linear-gradient(90deg, #084b46 36%, #084b4699 90%), url("/wardline/risk-contours.svg");
+}
+
+@media (max-width: 680px) {
+  .risk-banner {
+    background-image: linear-gradient(90deg, #084b46 10%, #084b46b3 65%, #084b4655), url("/wardline/risk-contours.svg");
+    background-size: cover, auto 100%;
+    background-position: center, 45% center;
+  }
+
+  .risk-headline {
+    min-height: 178px;
+  }
+
+  .risk-caption {
+    max-width: 95%;
+  }
+}
+
+@layer base {
+  :where(button:not(:disabled), select, summary) {
+    cursor: pointer;
+  }
+
+  :where(a, button, input, select, summary):focus-visible {
+    outline: 3px solid #409284;
+    outline-offset: 3px;
+  }
+
+  :where(thead) {
+    background: #f1f5f1;
+  }
+}
